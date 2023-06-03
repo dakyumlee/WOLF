@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #3BACD9 !important;
+}
+
+.intro {
+  color: #D984A3;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Chosunilbo_myungjo';
+  padding: 40px;
+}
+
+.intro__title:after {
+  content: '|';
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 500ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+      opacity: 1;
+  }
+  
+  to {
+      opacity: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Chosunilbo_myungjo';
+  font-size: 33px;
+  font-weight: bold;
+  color: #D984A3;
+}
+
+.index {
+  display: flex !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.index li {
+  padding: 5px !important;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px;
+}
+
+.index li:hover {
+  color: #3BBCD9 !important;
+  background-color: #D984A3 !important;
+  border-radius: 80% !important;
+}
+
+.index li a:hover {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  color: #3BBCD9 !important;
+  border-radius: 80% !important;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.wrap__card {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.card__inner {
+  width: 500px;
+  height: 500px;
+  background-color: #F288A4;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.cards li {
+  width: calc(100% / 4 - 20px);
+  height: calc(100% / 4 - 20px);
+  border: 1px solid #F288A4;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;  
+}
+
+.cards li .view {
+  position: absolute;
+  background:#F288A4;
+  transition: transform 0.5s linear;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.cards li .view.front {
+  z-index: 10;
+  transform: rotateY(0deg);
+}
+
+.cards li .view.back {
+  transform: rotateY(180deg);
+}
+
+.cards li.flip .view.front {
+  transform: rotateY(-180deg);
+}
+
+.cards li.flip .view.back {
+  transform: rotateY(0deg);
+}
+
+.cards li.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {transform: translateX(0);}
+  20% {transform: translateX(-15px);}
+  40% {transform: translateX(15px);}
+  60% {transform: translateX(-10px);}
+  80% {transform: translateX(10px);}
+  100% {transform: translateX(0);}
+}

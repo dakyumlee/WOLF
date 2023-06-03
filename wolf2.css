@@ -1,0 +1,167 @@
+@font-face {
+  font-family: 'Chosunilbo_myungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #3BACD9;
+}
+
+.intro {
+  color: #D984A3;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Chosunilbo_myungjo';
+}
+
+.intro__title:after {
+  content: '|';
+  display: inline-block;
+  font-size: 70px;
+  animation: moveCursor 500ms infinite;
+}
+
+@keyframes moveCursor {
+  from {
+      opacity: 1;
+  }
+  
+  to {
+      opacity: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Chosunilbo_myungjo';
+  font-size: 24px;
+  font-weight: bold;
+  color: #D984A3;
+}
+
+.index {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.index li {
+  padding: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: auto;
+}
+
+.index li:hover {
+  color: #3BBCD9;
+  background-color: #D984A3;
+  border-radius: 80%;
+}
+
+.index li a:hover {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #3BBCD9;
+  border-radius: 80%;
+}
+
+#adv {
+  width: 220px;
+  margin-top: 40px;
+  margin-left: 43%;
+  color: #D984A3;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Chosunilbo_myungjo';
+  border-radius: 100%;
+}
+
+#adv:hover {
+  background-color: #D984A3;
+  color: #3BBCD9;
+  font-size: 32px;
+  text-align: center;
+  font-family: 'Chosunilbo_myungjo';
+  border-radius: 100%;
+}
+
+.modal {
+  font-family: 'Chosunilbo_myungjo';
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal-content {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Chosunilbo_myungjo';
+  background-color: #D984A3;
+  color: white;
+  margin: 15% auto;
+  padding: 30px;
+  border: 2px solid white;
+  width: 400px;
+}
+
+.close {
+  font-family: 'Chosunilbo_myungjo';
+  color: white;;
+  float: right;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Chosunilbo_myungjo';
+  margin-left: 15px;
+  background-color: white;
+  color: #0F88F2;
+  border: 2px solid #0F88F2;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.dream {
+  font-family: 'Chosunilbo_myungjo';
+  color: #D984A3;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 45px;
+  font-weight: bold;
+}
+
+.txt1 {
+  padding: 15px;
+}
+
+#value {
+  padding: 4px;
+}
+
+.dreambtn {
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 0%;
+  border: 2px solid #D984A3;
+  background-color: #D984A3;
+  color: white;
+}
